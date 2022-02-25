@@ -89,6 +89,9 @@ img{
     .harga {
         font-size: 1vh;
     }
+    img{
+        width: 60%;
+    }
 }
 
 
