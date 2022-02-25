@@ -8,6 +8,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Source Sans Pro', sans-serif;
+	    overflow-x: hidden;
 }
 
 nav .navbar div .container-fluid a .navbar-brand {
