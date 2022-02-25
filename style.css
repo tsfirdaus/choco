@@ -11,6 +11,9 @@ body{
     overflow-x: hidden;
 }
 
+nav{
+    width: 100%;
+}
 nav .navbar div .container-fluid a .navbar-brand {
     background-color: #ffc107;
 }
