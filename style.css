@@ -34,7 +34,6 @@ nav .navbar div .container-fluid a .navbar-brand {
 
 img{
     box-shadow:0 0 0 5px #3f000f;
-    margin-left: 80px;
 	}
 
 .main {
@@ -48,12 +47,10 @@ img{
 }
 
 .detail{
-    margin-left: 80px;
     font-size: 8vh;
 }
 
 .harga {
-    margin-left: 80px;
     font-size: 4vh;
 }
 
@@ -69,30 +66,6 @@ img{
     margin-bottom: 25px;
 }
 
-@media screen and (max-width: 768px) {
-    .row {
-        width: 60%;
-        overflow-x: hidden;
-    }
-    .choco{
-        font-size: 10vh;
-    }
-    .milk{
-        font-size: 2vh;
-    }
-    .main h1 i{
-        font-size: 13vh;
-    }
-    .detail{
-        font-size: 3vh;
-    }
-    .harga {
-        font-size: 1vh;
-    }
-    img{
-        width: 60%;
-    }
-}
 
 
 
