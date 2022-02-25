@@ -8,11 +8,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Source Sans Pro', sans-serif;
-<<<<<<< HEAD
     overflow-x: hidden;
-=======
-	    overflow-x: hidden;
->>>>>>> ffb868b3c9dfd37d378d98448367c2792fc7dfb4
 }
 
 nav .navbar div .container-fluid a .navbar-brand {
@@ -78,7 +74,21 @@ img{
         width: 60%;
         overflow-x: hidden;
     }
-
+    .choco{
+        font-size: 10vh;
+    }
+    .milk{
+        font-size: 2vh;
+    }
+    .main h1 i{
+        font-size: 13vh;
+    }
+    .detail{
+        font-size: 3vh;
+    }
+    .harga {
+        font-size: 1vh;
+    }
 }
 
 
