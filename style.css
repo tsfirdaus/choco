@@ -72,6 +72,7 @@ img{
 @media screen and (max-width: 768px) {
     .row {
         width: 60%;
+        overflow-x: hidden;
     }
 
 }
