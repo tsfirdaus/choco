@@ -1,74 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="bundle.js"></script>
-    <title>Chocolate Milkshake</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Source+Sans+Pro:wght@600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat';
+        }
+
+        .carousel {
+            margin-bottom: 4rem;
+        }
+
+        /* Since positioning the image, we need to help out the caption */
+        .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
+        }
+
+        /* Declare heights because of positioning of img element */
+        .carousel-item {
+            height: 32rem;
+        }
+
+        .carousel-item>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            height: 32rem;
+        }
+    </style>
+    <title>brengSHAKE</title>
 </head>
-<body >
-<nav class="navbar navbar-expand-md navbar-light bg-warning">
-    <div class="container-fluid">
-    <a class="navbar-brand " href="#">Milkshake</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-    <div class="navbar-nav text-right">
-        <a class="nav-link active" aria-current="page" href="#home">Home</a>
-        <a class="nav-link" href="#product">Product</a>
-        <a class="nav-link" href="#location">Location</a>
+
+<body>
+    <!-- navbar -->
+    <div class="brand navbar-dark bg-dark text-light">
+        <h1 id="back" class="text-center mb-0">bring<span class="text-warning">SHAKE</span></h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-muted">Add some information about the album below, the author, or any other
+                            background context. Make it a few sentences long so folks can pick up some informative
+                            tidbits. Then, link them off to some social networking sites or contact information.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                            <li><a href="#" class="text-white">Like on Facebook</a></li>
+                            <li><a href="#" class="text-white">Email me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"
+                aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product">Product</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="dropdown08" data-bs-toggle="dropdown"
+                            aria-expanded="false">Contact</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                            <li><a class="dropdown-item" href="mailto:tsfirdaus0@gmail.com"><img width="32px"
+                                        src="img/gmail.png" alt="Gmail">
+                                    Email</a></li>
+                            <li><a class="dropdown-item" href="https://www.instagram.com/firdaus_singhh/"><img
+                                        width="32px" src="img/instagram.png" alt="Instagram"> Instagram</a></li>
+                            <li><a class="dropdown-item" href="https://wa.me/6287804022550"><img width="32px"
+                                        src="img/whatsapp.png" alt="Whatsapp"> Whatsapp</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown"
+                            aria-expanded="false">Others</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                            <li><a class="dropdown-item" href="https://goo.gl/maps/VY2Qtd3auNqZGAr2A">Location</a></li>
+                            <li><a target="_blank" class="dropdown-item" href="#">Coming Soon!</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- header  -->
+    <header>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" id="home">
+                    <a target="_blank" href="https://www.alodokter.com/mengambil-manfaat-cokelat-untuk-kesehatan"><img
+                            src="img/20220305_090534.jpg" class="d-block w-100" alt="Alodokter"></a>
+                </div>
+                <div class="carousel-item">
+                    <a target="_blank" href="https://hellosehat.com/nutrisi/fakta-gizi/manfaat-cokelat/"> <img
+                            src="img/20220305_090024.jpg" class="d-block w-100" alt="Hellosehat"></a>
+                </div>
+                <div class="carousel-item">
+                    <a target="_blank"
+                        href="https://www.merdeka.com/jabar/8-manfaat-coklat-bagi-tubuh-yang-jarang-diketahui-bisa-tingkatkan-fungsi-otak-kln.html">
+                        <img src="img/20220305_090154.jpg" class="d-block w-100" alt="Merdeka"></a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+    <main class="container marketing">
+        <hr class="featurette-divider">
+
+        <div class="row featurette " id="product">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Chocolate <span class="text-muted">Milkshake</span></h2>
+                <p class="lead">Milkshake coklat juga menjadi sebuah minuman yang kini cukup populer dimasyarakat.
+                    Milkshake coklat juga sangat mudah dijumpai, karena penjual yang menjajakan milkshake coklat banyak
+                    betebaran dimana-mana. Dalam mematok harga milkshake coklat bisa disesuaikan dengan yang sudah ada
+                    dipasaran,namun tentu berbeda dengan produk kami yang memiliki rasa yang unik dengan tambahan
+                    topping yang melimpah dengan harga yang terjangkau.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img width="500" height="500" class="img-thumbnail img-fluid" src="img/choco.jpg" alt="">
+                </svg>
+            </div>
+        </div>
+    </main>
+    <!-- end header -->
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img height="225" class="card-img-top" src="img/Boozy Red Velvet Milkshakes.jpg" alt="">
+
+                        <div class="card-body">
+                            <p class="card-text">Red Velvet Milkshake <br> Minuman dingin dengan campuran cream cheese
+                                diatasnya membuat rasa yang creamy.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div></div>
+                                <div class="btn-group">
+                                    <a target="_blank" href="https://gofood.link/a/DzsEvRA"> <button type="button"
+                                            class="btn btn-sm btn-outline-dark">Buy!</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img height="225" class="card-img-top" src="img/Oreo Milkshake Recipe — Salt & Baker.jpg"
+                            alt="">
+                        <div class="card-body">
+                            <p class="card-text">Oreo Milkshake <br> Minuman manis dan segar dengan taburan topping oreo
+                                yang renyah di atasnya.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div></div>
+                                <div class="btn-group">
+                                    <a target="_blank" href="https://gofood.link/u/15OwPA"> <button type="button"
+                                            class="btn btn-sm btn-outline-dark">Buy!</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img height="225" class="card-img-top" src="img/Dreamy Caramel Milkshake - Baking Mischief.png"
+                            alt="">
+                        <div class="card-body">
+                            <p class="card-text">Dreamy Caramel Milkshake <br> Minuman yang pas buat kamu penyuka
+                                karamel dengan rasa yang manis menyegarkan.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div></div>
+                                <div class="btn-group">
+                                    <a target="_blank" href="https://gofood.link/a/z1KVbBs"> <button type="button"
+                                            class="btn btn-sm btn-outline-dark">Buy!</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
-<div class="text-center awal container-fluid ">
-    <h1 id="home" class="choco fw-bold display-1 ">Chocolate</h1>
-    <h3 class="milk container fw-bold display-5">milkshake</h3>
-</div>
-<div class="container-fluid" >
-    <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Manfaat minum Chocolate!</h1>
-        <p id="cokelat" class="col-md-8 fs-4">Cokelat berasal dari biji kakao yang dapat diolah menjadi beragam jenis makanan dan minuman. Selain itu, cokelat juga sering digunakan sebagai campuran untuk membuat kue, biskuit, es krim, hingga permen.Cokelat kaya akan kandungan antioksidan, termasuk polifenol, flavanol, dan katekin. Berkat kandungan inilah cokelat dapat memberikan beragam manfaat bagi kesehatan. Lantas, apa saja manfaat cokelat?</p>
-        <a href="https://www.alodokter.com/mengambil-manfaat-cokelat-untuk-kesehatan" class="btn btn-warning active" target="_blank" role="button"  aria-pressed="true">Selengkapnya!</a>
-    </div>
-    </div>
-
-<div class="row text-center container-fluid py-5" >
-    <div class="col">
-    <img class="border" id="product" src="img/real.jpg" alt="" width="300px">
-    </div>
-    <div class="col" id="lengkap">
-    <p class="display-4"><b>Rasanya <i>MANTAP!</i></b></p>
-    <p class="display-5"><b>Tidak perlu kata kata yang penting beli saja, <br><i>MASHOOK!</i></b></p>
-    <p class="display-5">Harga mulai dari <i>Rp.18.000!</i></p>
-    <a href='https://wa.me/6287804022550' target='_blank' class="harga beli btn btn-warning"  role="button" >Beli Sekarang!</a>
-    </div>
-</div>
-<!-- <div id="main" class="main col-4">
-    <div>
-    <img class="rounded" id="product" src="img/g4.png" alt="" width="500">
-    </div>
-    <div>
-    <h1 class="motto"><b>Rasanya <br><i>MANTAP!!!</i></b></h1>
-    <p class="detail"><b>Tidak perlu kata kata yang penting beli saja, <br><i>MASHOOOOOK!</i></b></p>
-    <p class="harga">Harga mulai dari <i>Rp.18.000!</i></p>
-    <a href='https://wa.me/6287804022550text=assalamualaikum%20saya%20tertarik%20dengan%20produk%20milkshake%20chocolate%20anda' target='_blank' class="harga beli btn btn-warning"  role="button" >Beli Sekarang!</a>
-    </div>
-</div> -->
-<div id="location" class="location text-center container-fluid py-5">
-    <h2 class="local" >Location</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.904726648375!2d116.89336781422305!3d-1.226156499105655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df14f607437217b%3A0x4c245b99dcb396de!2sAgen%20Bubuk%20Milkshake%20%2F%20Es%20Blender%20(coklat%2C%20capucino%2C%20thai%20tea%2C%20green%20tea%2C%20dll)!5e0!3m2!1sid!2sid!4v1645790994534!5m2!1sid!2sid" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>    
-<footer class="bg-warning text-center mt-5">
-    <div class="text-center p-3" >
-    © 2020 Copyright: T.S. FIRDAUS
-</div>
-</footer>
+    <footer class="d-flex container-fluid bg-dark justify-content-around p-3 mt-5">
+        <p class="text-white mx-auto">&copy; 2022-2023 bringSHAKE Company, Inc.</p>
+        <p class="text-white"><a href="#back">Back to top</a></p>
+    </footer>
 </body>
+
 </html>
